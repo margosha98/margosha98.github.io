@@ -1,27 +1,146 @@
 body {
-    font-family: sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color:#121212;
+    background: url("img/fon.jpg")
 }
 
-h1 {
-    font-size: 50px;
+.page{
+    width:800px;
+    margin:20px auto;
+}
+
+.photo{
+    width: 400px;
+}
+
+
+/*Header*/ 
+
+.header {
+    padding: 20px;
+    background-color: #121212;
+    
+}
+
+.header-title {
+    margin: 0;
+    font-size:24px;
+    color:#fff;
+    text-align: center;
+    
+    
+}
+
+.header-subtitle {
+    margin: 0;
+    font-size:16px;
+    color:#7ab0e6;
+    text-align: center;
+    font-weight:normal; 
+    
+}
+
+
+/*  Nav   */
+
+.nav{
     text-align: center;
 }
-
-h2 {
-    color: royalblue;
-    font-size: 30px;
+.nav-link{
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color:#121212;
+    
+    
+    
+}
+.nav-link:hover{
+    background-color:#ccc
 }
 
-p {
-    background-color: lightblue;
-    font-size: 20px;
+
+
+/* Content */
+
+.content {
+    padding:20px
 }
 
-a {
-    color: black;
-    font-size: 20px;
+.content-title{
+    font-size: 25px;
+    margin: 30 0;
+    margin-top: 45px;
+    
+    color:#31485f
+        
 }
 
-img {
-    border: 2px solid brown;
+.content-text{
+    margin-bottom: 20px;
+}
+
+.read-more:hover{
+    text-decoration: underline;
+}
+
+/* Article */
+
+.article{
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+.article-title{
+    font-size: 15px;
+    margin: 0;
+    font-weight: normal;
+    margin-bottom: 15px;
+    color:#000000
+}
+
+ .article-title a{
+     color:#5c8b8d;
+     text-decoration: none;            
+}
+
+.article-title a:hover{
+    text-decoration: underline;
+}
+.article-date{
+    color:#ccc;
+    font-size:15px;
+}
+.content-text{
+    margin-bottom: 20px;
+}
+
+.mars{
+    background:url(img/mars.jpg);
+    padding: 10px 20px 20px 20px;
+    color: #794a00;
+    margin: 0;
+}
+.mars a{
+    color:aliceblue;
+    text-decoration: none;
+    font-weight: 800;
+}
+.mars a:hover{
+    padding: 5px;
+    background-color: rgba(221, 194, 152, 0.65)
+}
+
+/* Footer */
+
+.footer{
+    background-color: #121212;
+    color:#fff;
+    font-style:italic;
+    text-align: center;
+    padding:20px;
+    
 }
