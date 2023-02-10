@@ -108,7 +108,6 @@ function renderContent(activeHabbit) {
 
 
 function rerender(activeHabbitId) {
-    // document.querySelector('[name=writedComment]').classList.remove('error')
     globalHabbitId = activeHabbitId
     document.querySelector('.start_display').classList.add('hiden')
     document.querySelector('main').classList.remove('hiden')
@@ -151,10 +150,7 @@ function addNewDay(event) {
 }
 
 function deleteDay(indexEl) {
-    debugger
     habbits[globalHabbitId].days.splice(indexEl,1)
-    debugger
-    console.log(habbits)
     saveData()
     rerender(globalHabbitId)
 }
@@ -199,7 +195,7 @@ function addNewHabbitItem(event) {
     resetData(event.target, ['habbit-title','habbit-target'])
 
     event.preventDefault()
-    if (popupInputIconValue && popupInputTitleValue && Number(popapInputTargetValue)) {
+    if (popupInputIconValue && popupInputTitleValue && popapInputTargetValue>0) {
         let newHabbitItem = {
             "id": habbits.length,
             "icon": popupInputIconValue,

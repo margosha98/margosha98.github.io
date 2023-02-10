@@ -183,7 +183,7 @@ body {
 	background: #FFFFFF;
 	border-radius: 10px;
 	margin-bottom: 15px;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 }
 
 .habbit__day {
@@ -200,11 +200,11 @@ body {
 
 .habbit__comment {
 	display: flex;
-	width: 70%;
+	width: 100%;
 	color: #23235F;
 	font-size: 16px;
 	align-items: center;
-	margin: 0 25px;
+	margin: 0 3%;
 }
 
 .habbit__delete {
@@ -257,7 +257,7 @@ body {
 
 .input__message {
 	padding-left: 50px;
-	margin: 0 25px;
+	margin: 0 3%;
 	width: 1000%;
 	height: 45px;
 	border: 1px solid #E7EBFB;
@@ -276,7 +276,7 @@ input.error {
 .comment__icon {
 	position: absolute;
 	margin-top: 12px;
-	margin-left: 40px;
+	margin-left: 4%;
 }
 
 .case {
