@@ -191,6 +191,7 @@ body {
 	border-right:1px solid #E7EBFB;
 	font-size: 14px;
 	align-items: center;
+	white-space: nowrap;
 
 }
 
@@ -214,7 +215,8 @@ body {
 .habbit__delete img:hover {
 	filter: brightness(0) invert(0);
 	animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
-	}
+}
+
 @keyframes trambling-animation {
 	0%, 50%, 100% {
 	transform: rotate(0deg);
@@ -224,7 +226,7 @@ body {
 	}
 	20%, 40% {
 	transform: rotate(15deg);}
-	}
+}
 
 .ready__button {
 	height: 40px;
@@ -306,7 +308,7 @@ input.error {
 
 .popup {
 	text-align: center;
-	min-width:60%;
+	width:60%;
 	min-height: 30%;
 	background-color: #FFFFFF;
 	padding: 20px;
@@ -433,10 +435,101 @@ input.error {
 	width: 80px;
 }
 
+.warningEl {
+	display: flex;
+}
+
 .hiden {
 	visibility: hidden;
 }
 
 main {
 	visibility: visible;
+}
+
+
+@media screen and (max-width: 550px) {
+	.main-title {
+		font-size: 12px;
+	}
+	.logo {
+		max-width: 50px;
+	}
+	.panel {
+		padding: 20px 5px;
+		width: 20%;
+	}
+	.button-icon {
+		width: 40px;
+		height: 40px
+	}
+	.button-icon img {
+		width: 20px;
+	}
+	.menu__add {
+		width: 40px;
+		height: 40px;
+	}
+	.content {
+		padding: 10px 5px;
+	}
+	.habbit__day {
+		min-width: 55px;
+		padding: 15px 10px;
+		font-size: 11px;
+	}
+	.progress__text {
+		gap: 5px
+	}
+	.header__title {
+		font-size: 15px;
+		white-space:inherit;
+	}
+	.habbit__comment{
+		font-size: 11px;
+	}
+	.habbit-form__input-message {
+		font-size: 11px;
+		margin: 0%;
+	}
+	.habbit-form__comment-icon {
+		width: 15px;
+		margin-left: 7%;
+	}
+	.ready__button {
+		font-size: 8px;
+		margin-right: 2px;
+		min-width: 20%;
+	}
+	.habbit__delete {
+		margin-right: 2px;
+	}
+	.habbit__delete img {
+		width: 20px
+	}
+	.popup__title {
+		font-size: 12px;
+	}
+	.popup__subtitle {
+		font-size: 10px;
+	}
+	.popup__input::placeholder {
+		font-size: 10px;
+	}
+	.list__element {
+		font-size: 12px;
+	}
+	.start-display {
+		margin-top: 10px;
+	}
+	.start-display__arrow{
+		width: 40px;
+	}
+	.start-display__arrow_first {
+		top: -40px;
+    	left: -50px;
+	}
+	.popup_image {
+		width: 80%;
+	}
 }
