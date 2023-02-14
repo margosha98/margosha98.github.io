@@ -1,3 +1,5 @@
+/* All app */
+
 * {
 	box-sizing: border-box;
 }
@@ -13,12 +15,15 @@ body {
 	width: 100%;
 }
 
+/* Menu part */
+
 .panel {
 	background-color: #FBFAFF;
 	display: flex;
 	min-height: 100vh;
+	width: 30%;
 	flex-direction: column;
-	padding: 30px;
+	padding: 15px;
 	text-align: center;
 	font-weight: 1000;
 }
@@ -28,7 +33,7 @@ body {
 	margin: 0px auto;
 }
 
-.main_title {
+.main-title {
 	margin-top: 0px;
 	font-family: 'Chango', cursive;
 	font-size: 25px;
@@ -61,7 +66,7 @@ body {
 	align-items: center;
 }
 
-.menu__item {
+.button-icon {
 	width: 50px;
 	height: 50px;
 	background: #FFFFFF;
@@ -71,23 +76,23 @@ body {
 	cursor: pointer;
 }
 
-.menu__item:hover {
+.button-icon:hover {
 	background-color: #5051F9;
 }
 
-.menu__item:hover img{
+.button-icon:hover img{
 	filter: brightness(0) invert(1);
 }
 
-.menu__item_active {
+.button-icon_active {
 	background-color: #6044eb;
 }
 
-.menu__item_active img{
+.button-icon_active img{
 	filter: brightness(0) invert(1);
 }
 
-.menu__item_active:hover img {
+.button-icon_active:hover img {
 	filter: brightness(0) invert(1);
 	opacity:0.5;
 }
@@ -105,6 +110,7 @@ body {
 	background-color: #f3f0fd;
 }
 
+/* Main part  */
 
 .content {
 	position: relative;
@@ -113,6 +119,8 @@ body {
 	width: 100%;
 }
 
+/* Main part: header */
+
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -120,7 +128,7 @@ body {
 	padding: 20px 0;
 }
 
-.title {
+.header__title {
 	font-weight: 600;
 	font-size: 20px;
 }
@@ -130,7 +138,7 @@ body {
 	margin-right: 10px;
 }
 
-.progress_text {
+.progress__text {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -163,18 +171,7 @@ body {
 	transition: all 1s;
 }
 
-.part {
-	display: flex;
-	background-color: #FFFFFF;
-	border-radius: 10px;
-	height: 50px;
-	align-items: center;
-}
-
-.day {
-	background-color: #FBFAFF;
-}
-
+/* Main part: Days of habbits */
 
 .habbit {
 	min-width: 100%;
@@ -183,7 +180,6 @@ body {
 	background: #FFFFFF;
 	border-radius: 10px;
 	margin-bottom: 15px;
-	/* justify-content: space-between; */
 }
 
 .habbit__day {
@@ -230,8 +226,6 @@ body {
 	transform: rotate(15deg);}
 	}
 
-
-
 .ready__button {
 	height: 40px;
 	min-width: 15%;
@@ -249,13 +243,13 @@ body {
 	background-color: #e1e1f2;
 }
 
-.habbit__form {
+.habbit-form {
 	display: flex;
 	width: 100%;
 	
 }
 
-.input__message {
+.habbit-form__input-message {
 	padding-left: 50px;
 	margin: 0 3%;
 	width: 1000%;
@@ -273,11 +267,13 @@ input.error {
 	border: 1px solid red;
 }
 
-.comment__icon {
+.habbit-form__comment-icon {
 	position: absolute;
 	margin-top: 12px;
 	margin-left: 4%;
 }
+
+/* Adding new habbit */
 
 .case {
 	position: fixed;
@@ -303,12 +299,12 @@ input.error {
 
 }
 
-.case.open .popup_form {
+.case.open .popup {
 	transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
 	opacity: 1;
 }
 
-.popup_form {
+.popup {
 	text-align: center;
 	min-width:60%;
 	min-height: 30%;
@@ -322,33 +318,33 @@ input.error {
 	transform: perspective(600px) translate(0px, -100%) rotateX(0deg);;
 }
 
-.popup_form__header {
+.popup__header {
 	position: relative
 }
 
-.popup_form__header h1 {
+.popup__title {
 	margin-top: 0px;
 	font-weight: 400;
 	font-size: 24px;
 }
 
-.popup_form__header h2 {
+.popup__subtitle {
 	font-weight: 500;
 	font-size: 14px;
 	color: #768396;
 }
 
-.icons_container {
+.icons-container {
 	display: flex;
 	justify-content: center;
 	gap: 15px;
 }
 
-.popup_icon {
+.popup__button {
 	border: 1px solid #5051F9;
 }
 
-.shape__icon {
+.popup__shape-button {
 	background-color: #FFF;
 	border: none;
 	position: absolute;
@@ -358,14 +354,14 @@ input.error {
 	transition-duration: 0.3s;
 }
 
-.shape__icon:hover {
+.popup__shape-button:hover {
 	background-color: #eceff6;
 	padding: 8px;
 	border-radius: 2px;
 	transition-duration: 0.3s;
 }
 
-.popup__input_container {
+.popup__input-container {
 	gap: 5px;
 	display: flex;
 	flex-direction: column;
@@ -373,21 +369,21 @@ input.error {
 	align-items: center;
 }
 
-.popup__input_container input {
+.popup__input {
 	border: 1px solid #E7EBFB;
 	border-radius: 9px;
 	padding:10px;
 	width: 100%;
 }
 
-.popup__input_container input::placeholder {
+.popup__input::placeholder {
 	font-family: 'Comfortaa';
 	font-weight: 400;
 	font-size: 14px;
 	color: #8899A8;
 }
 
-.ready__button_popup {
+.popup__ready-button {
 	margin-top: 10px;
 	cursor: pointer;
 }
@@ -397,16 +393,18 @@ input.error {
 }
 
 
-.start_display {
+/* Display in the absence of habits */
+
+.start-display {
 	margin-top: 50px;
 	text-align: left;
 	visibility: visible;
 }
 
-ol {
+.list {
 	text-align: center;
 }
-li {
+.list__element {
 	text-align: left;
 	margin: 10px auto;
 	position: relative;
@@ -417,26 +415,23 @@ li {
 	width: 50%;
 }
 
-
-.arrow  {
-top: -30px;
-left: -100px;
-width: 80px;
-position: absolute;
-rotate: 130deg;
-opacity: 0.8;
+.start-display__arrow  {
+	position: absolute;
+	opacity: 0.8;
 }
 
+.start-display__arrow_first  {
+	top: -60px;
+	left: -100px;
+	width: 80px;
+	rotate: 160deg;
+}
 
-.arrow2  {
+.start-display__arrow_second  {
 	top: 30px;
 	left: 5%;
 	width: 80px;
-	position: absolute;
-	/* rotate: 130deg; */
-	opacity: 0.8;
-	}
-	
+}
 
 .hiden {
 	visibility: hidden;

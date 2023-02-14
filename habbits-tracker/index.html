@@ -14,8 +14,8 @@
   <body>
     <div class="app">
       <div class="panel">
-        <img class="logo" src="./src/logo.png" alt="Logo Habbit"></img>
-        <p class="main_title">HabbIt</p>
+        <img class="logo" src="./src/logo3.png" alt="Logo Habbit"></img>
+        <p class="main-title">HabbIt</p>
         <nav class="menu">
           <div class="menu__list"> </div>
           <div> <button class="menu__add" onclick="togglePopup(true)"> <img src="./src/Add.svg" /></button></div>
@@ -24,13 +24,10 @@
       </div>
 
       <div  class="content">
-
-        <header class="header">
-          <div class="title">
-            <h1 class="title">Использование трекера</h1>
-          </div>
+        <header class="header">  
+          <h1 class="header__title">Использование трекера</h1>
           <div class="progress">
-            <div class="progress_text">
+            <div class="progress__text">
               <div class="progress__title">Прогресс</div>
               <div class="progress__percent">%</div>
             </div>
@@ -41,51 +38,49 @@
         </header>
 
         <main>
-          <div class="days_container"></div>
+          <div class="days-container"></div>
           <div class="habbit">
             <div class="habbit__day"></div>
-            <form class="habbit__form" onsubmit="addNewDay(event)">
-                  <img class="comment__icon" src="./src/Comment.svg"/>
-                  <input name="writedComment" class="input__message" type="text" placeholder="Комментарий" />      
+            <form class="habbit-form" onsubmit="addNewDay(event)">
+                  <img class="habbit-form__comment-icon" src="./src/Comment.svg"/>
+                  <input name="writedComment" class="habbit-form__input-message" type="text" placeholder="Комментарий" />      
                   <button class="ready__button" type="submit">Готово</button>
                 </form>
-
           </div>
         </main>
 
-        <div class="start_display">
-          <ol>
-            <li>Открой окно добавления привычки
-              <img class="arrow" src="./src/arrow.png" />
+        <div class="start-display">
+          <ol class="list">
+            <li class="list__element">Открой окно добавления привычки
+              <img class="start-display__arrow start-display__arrow_first" src="./src/arrow.png" />
             </li>
-            <li>Выбери иконку привычки, заполни название и количество дней
-              <img class="arrow2" src="./src/arrow.png" />
+            <li class="list__element">Выбери иконку привычки, заполни название и количество дней
+              <img class="start-display__arrow start-display__arrow_second" src="./src/arrow.png" />
             </li>
               <img class="popup_image" src="./src/habbit-image.png"/>
-            
-            <li>Следи за прогрессом с помощью панели в правом верхнем углу</li>
+            <li class="list__element">Следи за прогрессом с помощью панели в правом верхнем углу</li>
           </ol>
         </div>
 
 
         <div class="case">
-          <div class="popup_form">
-            <div class="popup_form__header">
-              <h1>Новая привычка</h1>
-              <h2> Иконка</h2>
-              <div class="icons_container">
-                <button class="menu__item popup_icon menu__item_active" onclick="setPopupIcon(this, 'sport')"> <img src="./src/sport.svg"/></button>
-                <button class="menu__item popup_icon" onclick="setPopupIcon(this, 'water')"> <img src="./src/water.svg"/></button>
-                <button class="menu__item popup_icon" onclick="setPopupIcon(this, 'food')"> <img src="./src/food.svg"/></button>
+          <div class="popup">
+            <div class="popup__header">
+              <h1 class="popup__title">Новая привычка</h1>
+              <h2 class="popup__subtitle"> Иконка</h2>
+              <div class="icons-container">
+                <button class="button-icon popup__button button-icon_active" onclick="setPopupIcon(this, 'sport')"> <img src="./src/sport.svg"/></button>
+                <button class="button-icon popup__button" onclick="setPopupIcon(this, 'water')"> <img src="./src/water.svg"/></button>
+                <button class="button-icon popup__button" onclick="setPopupIcon(this, 'food')"> <img src="./src/food.svg"/></button>
               </div>
-              <button class="shape__icon" onclick="togglePopup(false)"><img src="./src/shape.png" /></button>
+              <button class="popup__shape-button" onclick="togglePopup(false)"><img src="./src/shape.png" /></button>
             </div>
             
-            <form class="popup__input_container" onsubmit="addNewHabbitItem(event)">
-              <input placeholder="Название" name="habbit-title" />
-              <input placeholder="Количество дней" name="habbit-target"/>
-              <input placeholder="icon" name="popup-icon_input" hidden value="sport"/>
-              <button class="ready__button ready__button_popup" type="submit">Добавить</button>
+            <form class="popup__input-container" onsubmit="addNewHabbitItem(event)">
+              <input class="popup__input" placeholder="Название" name="habbit-title" />
+              <input class="popup__input" placeholder="Количество дней" name="habbit-target"/>
+              <input class="popup__input" placeholder="icon" name="popup-icon_input" hidden value="sport"/>
+              <button class="ready__button popup__ready-button" type="submit">Добавить</button>
             </form>
           </div>
         </div>

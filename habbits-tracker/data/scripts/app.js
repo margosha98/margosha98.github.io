@@ -7,12 +7,12 @@ let globalHabbitId
 let page = {
     menu: document.querySelector('.menu__list'),
     header: {
-        title: document.querySelector('.title'),
+        title: document.querySelector('.header__title'),
         progressPersent: document.querySelector('.progress__percent'),
         progressCoverBar: document.querySelector('.progress__cover-bar'),
     },
     content: {
-        daysContainer: document.querySelector('.days_container'),
+        daysContainer: document.querySelector('.days-container'),
         newDay: document.querySelector('.habbit__day')
     },
     popup: {
@@ -47,21 +47,21 @@ function rerenderMenu(activeHabbit) {
         if (!existed) {
             const el = document.createElement("button")
             el.setAttribute('menu-habbit-id', habbit.id)
-            el.classList.add('menu__item')
+            el.classList.add('button-icon')
             el.addEventListener('click', () => rerender(habbit.id))
             el.innerHTML = `<img src="./src/${habbit.icon}.svg" alt=${habbit.name}>`
 
             if (habbit.id === activeHabbit.id) {
-                el.classList.add('menu__item_active')
+                el.classList.add('button-icon_active')
             }
             page.menu.appendChild(el)
 
             continue
         }
         if (activeHabbit.id === habbit.id) {
-            existed.classList.add('menu__item_active')
+            existed.classList.add('button-icon_active')
         } else {
-            existed.classList.remove('menu__item_active')
+            existed.classList.remove('button-icon_active')
         }
 
     }
@@ -80,11 +80,11 @@ function rerenderHeader(activeHabbit) {
 
 function renderContent(activeHabbit) {
     if (habbits.length!==0) {
-        document.querySelector('.start_display').classList.add('.hiden')
+        document.querySelector('.start-display').classList.add('.hiden')
         document.querySelector('main').classList.remove('.hiden')
     } else {
-        document.querySelector('.start_display').classList.remove('.hiden')
-        document.querySelector('.start_display').classList.add('.hiden')
+        document.querySelector('.start-display').classList.remove('.hiden')
+        document.querySelector('.start-display').classList.add('.hiden')
     }
     let days = activeHabbit.days
     page.content.daysContainer.innerHTML = ''
@@ -109,7 +109,7 @@ function renderContent(activeHabbit) {
 
 function rerender(activeHabbitId) {
     globalHabbitId = activeHabbitId
-    document.querySelector('.start_display').classList.add('hiden')
+    document.querySelector('.start-display').classList.add('hiden')
     document.querySelector('main').classList.remove('hiden')
     const activeHabbit = habbits.find(habbit => habbit.id === activeHabbitId)
     if (!activeHabbit) {
@@ -157,7 +157,7 @@ function deleteDay(indexEl) {
 
 function togglePopup(bool) {
     if (document.querySelector('.warningEl')) {
-        document.querySelector('.popup__input_container').removeChild(document.querySelector('.warningEl'))
+        document.querySelector('.popup__input-container').removeChild(document.querySelector('.warningEl'))
     }
     
     if (bool) {
@@ -176,8 +176,8 @@ function resetData(el,array) {
 }
 
 function setPopupIcon(context, icon) {
-    page.popup.window.querySelector('.menu__item_active').classList.remove('menu__item_active')
-    context.classList.add('menu__item_active')
+    page.popup.window.querySelector('.button-icon_active').classList.remove('button-icon_active')
+    context.classList.add('button-icon_active')
 
     page.popup.popupInputIcon.value = icon
 
@@ -212,7 +212,7 @@ function addNewHabbitItem(event) {
             let warningEl = document.createElement('p')
             warningEl.classList.add('warningEl')
             warningEl.innerText = 'Не заполнены или некорректно заполнены элементы ввода!'
-            document.querySelector('.popup__input_container').appendChild(warningEl)
+            document.querySelector('.popup__input-container').appendChild(warningEl)
         }
     }
 }
@@ -222,7 +222,7 @@ function addNewHabbitItem(event) {
 (() => {
     loadData();
     if (habbits.length === 0 ) {
-            document.querySelector('.start_display').classList.remove('hiden')
+            document.querySelector('.start-display').classList.remove('hiden')
             document.querySelector('main').classList.add('hiden')
     } else {
     rerender(habbits[0].id)
