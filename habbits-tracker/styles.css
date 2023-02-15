@@ -8,6 +8,7 @@ body {
 	font-family: 'Comfortaa', cursive;
 	margin: 0;
 	background-color: #f5f3fd;
+	height: 100vh;
 }
 
 .app {
