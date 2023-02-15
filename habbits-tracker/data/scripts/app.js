@@ -81,10 +81,10 @@ function rerenderHeader(activeHabbit) {
 function renderContent(activeHabbit) {
     if (habbits.length!==0) {
         document.querySelector('.start-display').classList.add('.hiden')
-        document.querySelector('section').classList.remove('.hiden')
+        document.querySelector('.habbits-container').classList.remove('.hiden')
     } else {
         document.querySelector('.start-display').classList.remove('.hiden')
-        document.querySelector('.start-display').classList.add('.hiden')
+        document.querySelector('.habbits-container').classList.add('.hiden')
     }
     let days = activeHabbit.days
     page.content.daysContainer.innerHTML = ''
