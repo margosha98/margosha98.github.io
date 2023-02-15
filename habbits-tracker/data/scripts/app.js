@@ -81,7 +81,7 @@ function rerenderHeader(activeHabbit) {
 function renderContent(activeHabbit) {
     if (habbits.length!==0) {
         document.querySelector('.start-display').classList.add('.hiden')
-        document.querySelector('main').classList.remove('.hiden')
+        document.querySelector('section').classList.remove('.hiden')
     } else {
         document.querySelector('.start-display').classList.remove('.hiden')
         document.querySelector('.start-display').classList.add('.hiden')
@@ -110,7 +110,7 @@ function renderContent(activeHabbit) {
 function rerender(activeHabbitId) {
     globalHabbitId = activeHabbitId
     document.querySelector('.start-display').classList.add('hiden')
-    document.querySelector('main').classList.remove('hiden')
+    document.querySelector('section').classList.remove('hiden')
     const activeHabbit = habbits.find(habbit => habbit.id === activeHabbitId)
     if (!activeHabbit) {
         return
@@ -223,7 +223,7 @@ function addNewHabbitItem(event) {
     loadData();
     if (habbits.length === 0 ) {
             document.querySelector('.start-display').classList.remove('hiden')
-            document.querySelector('main').classList.add('hiden')
+            document.querySelector('section').classList.add('hiden')
     } else {
     rerender(habbits[0].id)
     }
