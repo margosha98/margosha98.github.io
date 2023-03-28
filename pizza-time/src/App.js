@@ -1,29 +1,24 @@
-import Categories from './components/Categories';
+import React from 'react';
 import Header from './components/Header';
-import PizzaBlock from './components/PizzaBlock';
-import Sort from './components/Sort';
 import logo from './assets/image/pizza-logo.svg';
 import './scss/app.scss';
-
-import pizzas from './assets/pizzaInfo.json';
+import Main from './pages';
+import NotFoundPage from './pages/NotFoundPage';
+import { Routes, Route } from 'react-router-dom';
+import CartPage from './pages/CartPage';
 
 function App() {
+  let [searchValue, setSearchValue] = React.useState('');
+
   return (
     <div className="wrapper">
-      <Header logo={logo} />
+      <Header searchValue={searchValue} setSearchValue={setSearchValue} logo={logo} />
       <div className="content">
-        <div className="container">
-          <div className="content__top">
-            <Categories />
-            <Sort />
-          </div>
-          <h2 className="content__title">Все пиццы</h2>
-          <div className="content__items">
-            {pizzas.map((pizzaInfo) => (
-              <PizzaBlock {...pizzaInfo} />
-            ))}
-          </div>
-        </div>
+        <Routes>
+          <Route path="/" element={<Main searchValue={searchValue} />} />
+          <Route path="cart" element={<CartPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
       </div>
     </div>
   );
