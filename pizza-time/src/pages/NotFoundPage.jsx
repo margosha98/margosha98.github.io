@@ -1,11 +1,8 @@
-import React from 'react'
-import ErrorComponent from '../components/Error/ErrorComponent'
-
+import React from 'react';
+import ErrorComponent from '../components/Error/ErrorComponent';
 
 function NotFoundPage() {
-    return (
-        <ErrorComponent />
-    )
+  return <ErrorComponent />;
 }
 
-export default NotFoundPage
+export default NotFoundPage;

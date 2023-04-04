@@ -1,32 +1,41 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
 
-function PizzaBlock({title, price, imageUrl, sizes, types}) {
-  const typeNames= ['тонкое', 'традиционное']
+function PizzaBlock({ title, price, imageUrl, sizes, types }) {
+  const typeNames = ['тонкое', 'традиционное'];
 
-  const [typeIndex, setTypeIndex] = useState(0)
-  const [sizeIndex, setSizeIndex] = useState(0)
+  const [typeIndex, setTypeIndex] = useState(0);
+  const [sizeIndex, setSizeIndex] = useState(0);
 
-    return (
-      <div className='pizza-block-wrapper'>
-        <div className="pizza-block">
-        <img
-          className="pizza-block__image"
-          src={imageUrl}
-          alt="Pizza"
-        />
+  return (
+    <div className="pizza-block-wrapper">
+      <div className="pizza-block">
+        <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
         <h4 className="pizza-block__title">{title}</h4>
         <div className="pizza-block__selector">
           <ul>
-            {types.map((value, i) => (<li key={i} className={typeIndex === value ? "active" : ''} onClick={() => setTypeIndex(value)}>{typeNames[value]}</li>))}
-            
+            {types.map((value, i) => (
+              <li
+                key={i}
+                className={typeIndex === value ? 'active' : ''}
+                onClick={() => setTypeIndex(value)}>
+                {typeNames[value]}
+              </li>
+            ))}
           </ul>
           <ul>
-            {sizes.map((value,i) => <li key={i} className={sizeIndex === i ? "active" : ''} onClick={() => setSizeIndex(i)}>{value} см.</li>)}
+            {sizes.map((value, i) => (
+              <li
+                key={i}
+                className={sizeIndex === i ? 'active' : ''}
+                onClick={() => setSizeIndex(i)}>
+                {value} см.
+              </li>
+            ))}
           </ul>
         </div>
         <div className="pizza-block__bottom">
           <div className="pizza-block__price">от {price} ₽</div>
-          <button  className="button button--outline button--add">
+          <button className="button button--outline button--add">
             <svg
               width="12"
               height="12"
@@ -44,7 +53,7 @@ function PizzaBlock({title, price, imageUrl, sizes, types}) {
         </div>
       </div>
     </div>
-    )
+  );
 }
 
 export default PizzaBlock;
