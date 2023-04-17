@@ -8,6 +8,21 @@ function Sort({ value, onClickToSort, titlesOfSort }) {
     setIsVisiblePopup(false);
   };
 
+  React.useEffect(() => {
+    const toClickOnBody = (event) => {
+      let elIsIncludeSort = event.composedPath().find((item) => item.className === 'sort');
+
+      if (!elIsIncludeSort) {
+        setIsVisiblePopup(false);
+      }
+    };
+    document.body.addEventListener('click', toClickOnBody);
+
+    return () => {
+      document.body.removeEventListener('click', toClickOnBody);
+    };
+  }, []);
+
   return (
     <div className="sort">
       <div className="sort__label">

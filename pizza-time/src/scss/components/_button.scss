@@ -57,7 +57,7 @@
     background-color: #fff;
     border-color: $orange;
     &,
-    span {
+    b {
       color: $orange;
     }
 
@@ -71,6 +71,9 @@
       background-color: $orange;
 
       &,
+      b {
+        color: #fff;
+      }
       span {
         color: #fff;
       }
@@ -103,6 +106,7 @@
     span {
       font-weight: 600;
       font-size: 16px;
+      color: $orange;
     }
 
     &:hover {
