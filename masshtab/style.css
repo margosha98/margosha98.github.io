@@ -37,3 +37,6 @@ ul {
     line-height: 20px;
     margin-top: 0;
     }
+body {
+    -webkit-text-size-adjust: none;
+}
