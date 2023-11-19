@@ -12,7 +12,7 @@ let zoom = {
 };
 
 svg.addEventListener("wheel", onWheel);
-svg.addEventListener("touchmove", onWheel);
+svg.addEventListener("resize", onWheel);
 
 function onWheel(event) {
     console.log(baseObject, viewBox)
