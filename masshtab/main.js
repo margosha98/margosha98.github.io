@@ -1,5 +1,12 @@
 let svg = document.querySelector("#svg");
+import Zoomist from "zoomist";
 
+new Zoomist('.box', {
+    maxScale: 4,
+    bounds: true,
+    slider: true,
+    zoomer: true
+})
 
 let point = svg.createSVGPoint();
 let viewBox = svg.viewBox.baseVal;
