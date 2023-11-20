@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "eslint": "^8.53.0"
+    "eslint": "^8.53.0",
+    "zoomist": "^2.0.11"
   }
 }
