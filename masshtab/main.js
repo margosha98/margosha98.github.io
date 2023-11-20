@@ -11,8 +11,8 @@ let zoom = {
     scaleFactor: 1.05,
 };
 
-svg.addEventListener("wheel", onWheel);
-svg.addEventListener("resize", onWheel);
+// svg.addEventListener("wheel", onWheel);
+// svg.addEventListener("resize", onWheel);
 
 function onWheel(event) {
     console.log(baseObject, viewBox)
